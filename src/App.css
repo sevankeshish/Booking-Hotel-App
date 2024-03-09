@@ -1,0 +1,72 @@
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.headerSearch {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #ebe9e9;
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.headerSearchInput {
+  padding: 0.7rem 0.5rem;
+  font-size: 1rem;
+}
+.headerSearchItem {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.headerSearchItem .seperator {
+  display: inline-block;
+  width: 1px;
+  height: 30px;
+  background-color: var(--text-400);
+  margin: 0 1rem;
+}
+.textField {
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+}
+.headerIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+}
+.locationIcon {
+  color: var(--rose-500);
+}
+
+.dateIcon {
+  color: var(--primary-700);
+}
+
+.dateDropDown {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+}
+.headerSearchBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-600);
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 1rem;
+}
+.headerIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+}
