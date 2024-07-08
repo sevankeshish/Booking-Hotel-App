@@ -89,6 +89,13 @@
   gap: 1rem;
 }
 
+.date {
+  position: absolute;
+  top: 50px;
+  left: -5rem;
+  z-index: 1002;
+}
+
 .dateIcon {
   color: var(--primary-700);
 }

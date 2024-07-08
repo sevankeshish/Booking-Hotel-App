@@ -1,18 +1,34 @@
-import { useState } from "react";
-
-import { MdLocationOn } from "react-icons/md";
-import { HiCalendar, HiMinus, HiPlus, HiSearch } from "react-icons/hi";
 import { useRef } from "react";
+import { useState } from "react";
+import { MdLocationOn } from "react-icons/md";
+import { DateRange } from "react-date-range";
+import { HiCalendar, HiMinus, HiPlus, HiSearch } from "react-icons/hi";
+
+import { format } from "date-fns";
+
 import useOutsideClick from "../hooks/useOutsideClick";
 
+import "react-date-range/dist/styles.css"; // main style file
+import "react-date-range/dist/theme/default.css"; // theme css file
+
 const Header = () => {
-  const [destination, setDestination] = useState("");
   const [openOptions, setOpenOptions] = useState(false);
+  const [openDate, setOpenDate] = useState(false);
+
+  const [destination, setDestination] = useState("");
+
   const [options, setOptions] = useState({
     adult: 1,
     children: 0,
     room: 1,
   });
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    },
+  ]);
 
   const handleOptions = (name, operation) => {
     setOptions((prevState) => {
@@ -41,7 +57,21 @@ const Header = () => {
         </div>
         <div className="headerSearchItem">
           <HiCalendar className="headerIcon dateIcon" />
-          <div className="dateDropDown ">03/15/2024</div>
+          <div onClick={() => setOpenDate(!openDate)} className="dateDropDown ">
+            {`${format(date[0].startDate, "MM/dd/yyyy")} to ${format(
+              date[0].endDate,
+              "MM/dd/yyyy"
+            )}`}
+          </div>
+          {openDate && (
+            <DateRange
+              ranges={date}
+              minDate={new Date()}
+              className="date"
+              onChange={(item) => setDate([item.selection])}
+              moveRangeOnFirstSelection={true}
+            />
+          )}
           <span className="seperator"></span>
         </div>
         <div className="headerSearchItem">
