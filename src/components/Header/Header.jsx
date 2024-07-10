@@ -6,7 +6,7 @@ import { HiCalendar, HiMinus, HiPlus, HiSearch } from "react-icons/hi";
 
 import { format } from "date-fns";
 
-import useOutsideClick from "../hooks/useOutsideClick";
+import useOutsideClick from "../../hooks/useOutsideClick";
 
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
