@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 export default function useFetch(url, query = "") {
   const [data, setData] = useState([]);
-  consr[(isLoading, setIsLoading)] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -21,7 +21,7 @@ export default function useFetch(url, query = "") {
     }
 
     fetchData();
-  }, [url, query]);
+  }, [query, url]);
 
-  return { isLoading, Data };
+  return { isLoading, data };
 }
