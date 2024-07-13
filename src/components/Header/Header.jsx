@@ -10,8 +10,16 @@ import useOutsideClick from "../../hooks/useOutsideClick";
 
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
+import {
+  createSearchParams,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const [openOptions, setOpenOptions] = useState(false);
   const [openDate, setOpenDate] = useState(false);
 
@@ -36,6 +44,19 @@ const Header = () => {
         ...prevState,
         [name]: operation === "inc" ? options[name] + 1 : options[name] - 1,
       };
+    });
+  };
+
+  const handleSearch = () => {
+    const encodedParams = createSearchParams({
+      date: JSON.stringify(date),
+      destination,
+      options: JSON.stringify(options),
+    });
+    // setSearchParams(encodedParams);
+    navigate({
+      pathname: "/hotels",
+      search: encodedParams.toString(),
     });
   };
 
@@ -89,7 +110,7 @@ const Header = () => {
           <span className="seperator"></span>
         </div>
         <div className="headerSearchItem">
-          <button className="headerSearchBtn">
+          <button className="headerSearchBtn" onClick={handleSearch}>
             <HiSearch className="headerIcon" />
           </button>
         </div>
