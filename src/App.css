@@ -158,3 +158,25 @@
   color: var(--text-400);
   font-weight: 400;
 }
+
+/* app layout */
+.appLayout {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  height: cals(100vh - 130px);
+  /* background-color: var(--text-100); */
+  align-items: stretch;
+}
+
+.sidebar {
+  width: 35%;
+  overflow-y: scroll;
+  padding-right: 1rem;
+}
+
+.mapContainer {
+  flex: 1;
+  background-color: var(--text-100);
+  position: relative;
+}
