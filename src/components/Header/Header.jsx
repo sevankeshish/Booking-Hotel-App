@@ -1,5 +1,9 @@
-import { useRef } from "react";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import {
+  createSearchParams,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import { MdLocationOn } from "react-icons/md";
 import { DateRange } from "react-date-range";
 import { HiCalendar, HiMinus, HiPlus, HiSearch } from "react-icons/hi";
@@ -10,11 +14,6 @@ import useOutsideClick from "../../hooks/useOutsideClick";
 
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
-import {
-  createSearchParams,
-  useNavigate,
-  useSearchParams,
-} from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
