@@ -22,7 +22,9 @@ const Header = () => {
   const [openOptions, setOpenOptions] = useState(false);
   const [openDate, setOpenDate] = useState(false);
 
-  const [destination, setDestination] = useState("");
+  const [destination, setDestination] = useState(
+    searchParams.get("destination") || ""
+  );
 
   const [options, setOptions] = useState({
     adult: 1,
