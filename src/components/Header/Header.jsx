@@ -16,15 +16,15 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 
 const Header = () => {
-  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-
-  const [openOptions, setOpenOptions] = useState(false);
-  const [openDate, setOpenDate] = useState(false);
 
   const [destination, setDestination] = useState(
     searchParams.get("destination") || ""
   );
+  const navigate = useNavigate();
+
+  const [openOptions, setOpenOptions] = useState(false);
+  const [openDate, setOpenDate] = useState(false);
 
   const [options, setOptions] = useState({
     adult: 1,
