@@ -269,3 +269,22 @@
     width: 50%;
   }
 }
+
+/* bookmark page */
+.bookmarkList {
+  margin-top: 1rem;
+}
+.bookmarkItem {
+  margin-bottom: 1rem;
+  border: 1px solid var(--text-400);
+  border-radius: 1rem;
+  padding: 1rem;
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bookmarkList .bookmarkItem.current-bookmark {
+  border: 2px solid var(--primary-600);
+  background-color: var(--text-100);
+}
