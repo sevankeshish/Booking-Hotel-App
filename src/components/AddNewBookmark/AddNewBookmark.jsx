@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import useUrlLocation from "../../hooks/useUrlLocation";
 
 function AddNewBookmark() {
   const navigate = useNavigate();
+  const [lat, lng] = useUrlLocation();
 
   return (
     <div>
