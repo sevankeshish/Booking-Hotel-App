@@ -5,7 +5,7 @@ import { useBookmark } from "../../context/BookmarkListContext";
 import Loader from "../Loader/Loader";
 
 function Bookmark() {
-  const { isLoading, bookmarks } = useBookmark();
+  const { isLoading, bookmarks, currentBookmark } = useBookmark();
 
   if (isLoading) return <Loader />;
 
@@ -16,7 +16,11 @@ function Bookmark() {
         {bookmarks.map((item) => {
           return (
             <Link to={`${item.id}?lat=${item.latitude}&lng=${item.longitude}`}>
-              <div key={item.id} className="bookmarkItem">
+              <div
+                className={`bookmarkItem ${
+                  item.id === currentBookmark?.id ? "current-bookmark" : ""
+                }  `}
+              >
                 <ReactCountryFlag svg countryCode={item.countryCode} />
                 &nbsp; <strong>{item.cityName}</strong> &nbsp;
                 <span>{item.country}</span>
