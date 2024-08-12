@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import ReactCountryFlag from "react-country-flag";
 import { useNavigate } from "react-router-dom";
+import { useBookmark } from "../../context/BookmarkListContext";
 import useUrlLocation from "../../hooks/useUrlLocation";
 import Loader from "../Loader/Loader";
 
@@ -16,6 +17,7 @@ function AddNewBookmark() {
   const [countryCode, setCountryCode] = useState("");
   const [isLoadingGeoCoding, setIsLoadingGeoCoding] = useState(false);
   const [geoCodingError, setGeoCodingError] = useState(null);
+  const { createBookmark } = useBookmark();
 
   useEffect(() => {
     if (!lat || !lng) return;
@@ -45,13 +47,29 @@ function AddNewBookmark() {
     fetchLocationData();
   }, [lat, lng]);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!cityName || !country) return;
+
+    const newBookmark = {
+      cityName,
+      country,
+      countryCode,
+      latitude: lat,
+      longitude: lng,
+      host_locaiton: cityName + " " + country,
+    };
+    await createBookmark(newBookmark);
+    navigate("/bookmark");
+  };
+
   if (isLoadingGeoCoding) return <Loader />;
   if (geoCodingError) return <strong>{geoCodingError}</strong>;
 
   return (
     <div>
       <h2>Bookmark New Location</h2>
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <div className="formControl">
           <label htmlFor="cityName">CityName</label>
           <input
