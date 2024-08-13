@@ -1325,33 +1325,6 @@
   ],
   "bookmarks": [
     {
-      "cityName": "Abalessa",
-      "country": "Algeria",
-      "countryCode": "DZ",
-      "latitude": "23.18455079512732",
-      "longitude": "3.795523257510883",
-      "host_location": "Abalessa Algeria",
-      "id": "1"
-    },
-    {
-      "cityName": "Mahidasht",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "34.32869425037187",
-      "longitude": "46.724183117022086",
-      "host_location": "Mahidasht Iran (Islamic Republic of)",
-      "id": "4"
-    },
-    {
-      "cityName": "Sanandaj",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "35.31372444726279",
-      "longitude": "47.03114358752335",
-      "host_location": "Sanandaj Iran (Islamic Republic of)",
-      "id": "5"
-    },
-    {
       "cityName": "A Dakhla Oasis",
       "country": "Egypt",
       "countryCode": "EG",
@@ -1368,15 +1341,6 @@
       "longitude": "67.78003711374224",
       "host_location": "Baba Kot Pakistan",
       "id": "8"
-    },
-    {
-      "id": "7eac",
-      "cityName": "Khandyga",
-      "country": "Russian Federation (the)",
-      "countryCode": "RU",
-      "latitude": "63.66576033778838",
-      "longitude": "137.81250000000003",
-      "host_locaiton": "Khandyga Russian Federation (the)"
     },
     {
       "id": "8ee5",
@@ -1413,6 +1377,24 @@
       "latitude": "47.075733642316195",
       "longitude": "2.6806640625",
       "host_locaiton": "Farges-en-Septaine France"
+    },
+    {
+      "id": "aff0",
+      "cityName": "Farges-en-Septaine",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "47.075733642316195",
+      "longitude": "2.6806640625",
+      "host_locaiton": "Farges-en-Septaine France"
+    },
+    {
+      "id": "0668",
+      "cityName": "Brecy",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "47.14491937709463",
+      "longitude": "2.6478767395019536",
+      "host_locaiton": "Brecy France"
     }
   ]
 }
