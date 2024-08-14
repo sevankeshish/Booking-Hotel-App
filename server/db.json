@@ -1334,15 +1334,6 @@
       "id": "7"
     },
     {
-      "cityName": "Baba Kot",
-      "country": "Pakistan",
-      "countryCode": "PK",
-      "latitude": "28.43528783183169",
-      "longitude": "67.78003711374224",
-      "host_location": "Baba Kot Pakistan",
-      "id": "8"
-    },
-    {
       "id": "8ee5",
       "cityName": "Sodankyla",
       "country": "Finland",
@@ -1368,15 +1359,6 @@
       "latitude": "56.36981383108917",
       "longitude": "9.975585937500002",
       "host_locaiton": "Favrskov Mark Denmark"
-    },
-    {
-      "id": "becb",
-      "cityName": "Farges-en-Septaine",
-      "country": "France",
-      "countryCode": "FR",
-      "latitude": "47.075733642316195",
-      "longitude": "2.6806640625",
-      "host_locaiton": "Farges-en-Septaine France"
     },
     {
       "id": "aff0",

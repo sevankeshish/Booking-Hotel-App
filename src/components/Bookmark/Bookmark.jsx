@@ -1,4 +1,3 @@
-import React from "react";
 import ReactCountryFlag from "react-country-flag";
 import { HiTrash } from "react-icons/hi";
 import { Link } from "react-router-dom";
