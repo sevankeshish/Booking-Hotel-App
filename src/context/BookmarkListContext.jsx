@@ -52,7 +52,10 @@ function BookmarkListProvider({ children }) {
   // const [bookmarks, setBookmarks] = useState([]);
   // const [isLoading, setIsLoading] = useState(false);
 
-  useReducer(bookmarkReducer, initialState);
+  const [{ bookmarks, isLoading, currentBookmark }, dispatch] = useReducer(
+    bookmarkReducer,
+    initialState
+  );
 
   useEffect(() => {
     async function fetchBookmarkList() {
@@ -74,6 +77,7 @@ function BookmarkListProvider({ children }) {
   }, []);
 
   async function getBookmark(id) {
+    if (Number(id) === currentBookmark?.id) return;
     // setIsLoading(true);
     dispatch({ type: "loading" });
     // setCurrentBookmark(null);
