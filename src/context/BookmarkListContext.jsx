@@ -47,11 +47,9 @@ function bookmarkReducer(state, action) {
   }
 }
 
-function BookmarkListProvider({ children }) {
-  // const [currentBookmark, setCurrentBookmark] = useState(null);
-  // const [bookmarks, setBookmarks] = useState([]);
-  // const [isLoading, setIsLoading] = useState(false);
+//1. pending, 2. success, 3. rejected
 
+function BookmarkListProvider({ children }) {
   const [{ bookmarks, isLoading, currentBookmark }, dispatch] = useReducer(
     bookmarkReducer,
     initialState
@@ -59,11 +57,9 @@ function BookmarkListProvider({ children }) {
 
   useEffect(() => {
     async function fetchBookmarkList() {
-      // setIsLoading(true);
       dispatch({ type: "loading" });
       try {
         const { data } = await axios.get(`${BASE_URL}/bookmarks/`);
-        // setBookmarks(data);
         dispatch({ type: "bookmarks/loaded", payload: data });
       } catch (error) {
         toast.error(error.message);
@@ -78,12 +74,9 @@ function BookmarkListProvider({ children }) {
 
   async function getBookmark(id) {
     if (Number(id) === currentBookmark?.id) return;
-    // setIsLoading(true);
     dispatch({ type: "loading" });
-    // setCurrentBookmark(null);
     try {
       const { data } = await axios.get(`${BASE_URL}/bookmarks/${id}`);
-      // setCurrentBookmark(data);
       dispatch({ type: "bookmark/loaded", payload: data });
     } catch (error) {
       toast.error(error.message);
@@ -95,12 +88,9 @@ function BookmarkListProvider({ children }) {
   }
 
   async function createBookmark(newBookmark) {
-    // setIsLoading(true);
     dispatch({ type: "loading" });
     try {
       const { data } = await axios.post(`${BASE_URL}/bookmarks/`, newBookmark);
-      // setCurrentBookmark(data);
-      // setBookmarks((prev) => [...prev, data]);
       dispatch({ type: "bookmark/created", payload: data });
     } catch (error) {
       toast.error(error.message);
@@ -112,7 +102,6 @@ function BookmarkListProvider({ children }) {
     dispatch({ type: "loading" });
     try {
       await axios.delete(`${BASE_URL}/bookmarks/${id}`);
-      // setBookmarks((prev) => prev.filter((item) => item.id !== id));
       dispatch({ type: "bookmard/deleted", payload: id });
     } catch (error) {
       toast.error(error.message);
@@ -141,3 +130,11 @@ export default BookmarkListProvider;
 export function useBookmark() {
   return useContext(BookmarkContext);
 }
+
+//  context  + reducer => value={{state, dispatch}} => SYNC ACTION => (no side effect !!)
+
+// ASYNC ACTION => reducer function is a PURE fucntion !!
+
+// 1. pass dispatch
+
+// 2. pass actoins => OK
