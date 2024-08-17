@@ -1325,15 +1325,6 @@
   ],
   "bookmarks": [
     {
-      "cityName": "A Dakhla Oasis",
-      "country": "Egypt",
-      "countryCode": "EG",
-      "latitude": "25.02090651422749",
-      "longitude": "29.09059588509316",
-      "host_location": "A Dakhla Oasis Egypt",
-      "id": "7"
-    },
-    {
       "id": "8ee5",
       "cityName": "Sodankyla",
       "country": "Finland",
@@ -1341,15 +1332,6 @@
       "latitude": "67.64894397040773",
       "longitude": "26.718750000000004",
       "host_locaiton": "Sodankyla Finland"
-    },
-    {
-      "id": "45cf",
-      "cityName": "Gausdal",
-      "country": "Norway",
-      "countryCode": "NO",
-      "latitude": "61.323985886877075",
-      "longitude": "10.195312500000002",
-      "host_locaiton": "Gausdal Norway"
     },
     {
       "id": "8eec",
@@ -1370,15 +1352,6 @@
       "host_locaiton": "Farges-en-Septaine France"
     },
     {
-      "id": "0668",
-      "cityName": "Brecy",
-      "country": "France",
-      "countryCode": "FR",
-      "latitude": "47.14491937709463",
-      "longitude": "2.6478767395019536",
-      "host_locaiton": "Brecy France"
-    },
-    {
       "id": "6e77",
       "cityName": "Beersel",
       "country": "Belgium",
@@ -1386,24 +1359,6 @@
       "latitude": "50.75296588441902",
       "longitude": "4.262695312500001",
       "host_locaiton": "Beersel Belgium"
-    },
-    {
-      "id": "9319",
-      "cityName": "Naestved",
-      "country": "Denmark",
-      "countryCode": "DK",
-      "latitude": "55.356477398961175",
-      "longitude": "11.579589843750002",
-      "host_locaiton": "Naestved Denmark"
-    },
-    {
-      "id": "9e62",
-      "cityName": "Chester",
-      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "countryCode": "GB",
-      "latitude": "53.283279508679094",
-      "longitude": "-2.4609375000000004",
-      "host_locaiton": "Chester United Kingdom of Great Britain and Northern Ireland (the)"
     }
   ]
 }

@@ -102,7 +102,7 @@ function BookmarkListProvider({ children }) {
     dispatch({ type: "loading" });
     try {
       await axios.delete(`${BASE_URL}/bookmarks/${id}`);
-      dispatch({ type: "bookmard/deleted", payload: id });
+      dispatch({ type: "bookmark/deleted", payload: id });
     } catch (error) {
       toast.error(error.message);
       dispatch({ type: "rejected", payload: error.message });
