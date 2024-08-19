@@ -1343,15 +1343,6 @@
       "host_locaiton": "Favrskov Mark Denmark"
     },
     {
-      "id": "aff0",
-      "cityName": "Farges-en-Septaine",
-      "country": "France",
-      "countryCode": "FR",
-      "latitude": "47.075733642316195",
-      "longitude": "2.6806640625",
-      "host_locaiton": "Farges-en-Septaine France"
-    },
-    {
       "id": "6e77",
       "cityName": "Beersel",
       "country": "Belgium",
@@ -1359,6 +1350,15 @@
       "latitude": "50.75296588441902",
       "longitude": "4.262695312500001",
       "host_locaiton": "Beersel Belgium"
+    },
+    {
+      "id": "9fa0",
+      "cityName": "Villeneuve-les-Genets",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "47.73228085675216",
+      "longitude": "3.0734252929687504",
+      "host_locaiton": "Villeneuve-les-Genets France"
     }
   ]
 }
