@@ -1359,6 +1359,15 @@
       "latitude": "47.73228085675216",
       "longitude": "3.0734252929687504",
       "host_locaiton": "Villeneuve-les-Genets France"
+    },
+    {
+      "id": "7b73",
+      "cityName": "Hawick",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "countryCode": "GB",
+      "latitude": "55.34906030927224",
+      "longitude": "-2.8454589843750004",
+      "host_locaiton": "Hawick United Kingdom of Great Britain and Northern Ireland (the)"
     }
   ]
 }
