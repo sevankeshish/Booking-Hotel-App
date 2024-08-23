@@ -72,7 +72,6 @@ function BookmarkListProvider({ children }) {
     fetchBookmarkList();
   }, []);
 
-  //
   async function getBookmark(id) {
     if (Number(id) === currentBookmark?.id) return;
     dispatch({ type: "loading" });
